@@ -57,5 +57,14 @@ public class DpNamingRuleController {
     }
 
 
+    @GetMapping("/options")
+    public Result getOptions(){
+        QueryWrapper<DpNamingRule> queryWrapper = new QueryWrapper<DpNamingRule>()
+                .select("id", "rule_name as name", "rule_prefix as rulePrefix", "rule_body as ruleBody")
+                .eq("is_deleted", "0");
+
+        return Result.ok(dpNamingRuleService.listMaps(queryWrapper));
+    }
+
 
 }
