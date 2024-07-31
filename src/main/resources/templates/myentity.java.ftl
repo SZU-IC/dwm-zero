@@ -25,8 +25,7 @@ import lombok.experimental.Accessors;
  * @since ${date}
  */
 <#if entityLombokModel>
-@Getter
-@Setter
+@Data
 <#if chainModel>
 @Accessors(chain = true)
 </#if>

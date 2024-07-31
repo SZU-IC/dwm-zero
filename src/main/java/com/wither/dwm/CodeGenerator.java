@@ -10,17 +10,17 @@ import java.util.function.Consumer;
 
 public class CodeGenerator {
     public static void main(String[] args) {
-        String[] tables={ "customer"  };
-        FastAutoGenerator.create("jdbc:mysql://hadoop102:3306/demo", "root", "123456")
+        String[] tables={ "dp_naming_rule"  };
+        FastAutoGenerator.create("jdbc:mysql://hadoop102:3306/dwm_2024", "root", "123456")
                 .globalConfig(builder -> {
                     builder.author("wither")               //作者
-                            .outputDir("/Users/liaoyixuan/Code/java_code/dwm-zero/src/main/java")    //输出路径(写到java目录)
+                            .outputDir("D:\\Code\\test\\dwm\\dwm-zero\\src\\main\\java")    //输出路径(写到java目录)
                             .commentDate("yyyy-MM-dd")
                             .dateType(DateType.ONLY_DATE);  //选择实体类中的日期类型  ，Date or LocalDatetime
                 })
                 .packageConfig(builder -> {                 //各个package 名称
-                    builder.parent("com.wither")
-                            .moduleName("dwm")
+                    builder.parent("com.wither.dwm")
+                            .moduleName("plan")
                             .entity("bean")
                             .service("service")
                             .serviceImpl("service.impl")
