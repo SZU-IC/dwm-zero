@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wither.dwm.model.mapper.DmTableMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wither.dwm.model.bean.DmTable">
+        <id column="id" property="id" />
+        <result column="model_id" property="modelId" />
+        <result column="domain_id" property="domainId" />
+        <result column="busi_process_id" property="busiProcessId" />
+        <result column="dim_id" property="dimId" />
+        <result column="stat_dim_ids" property="statDimIds" />
+        <result column="stat_period" property="statPeriod" />
+        <result column="dw_level" property="dwLevel" />
+        <result column="storage_mode" property="storageMode" />
+        <result column="table_name" property="tableName" />
+        <result column="table_name_chn" property="tableNameChn" />
+        <result column="schema_name" property="schemaName" />
+        <result column="rule_id" property="ruleId" />
+        <result column="lifecycle_days" property="lifecycleDays" />
+        <result column="security_level" property="securityLevel" />
+        <result column="tec_owner" property="tecOwner" />
+        <result column="busi_owner" property="busiOwner" />
+        <result column="table_status" property="tableStatus" />
+        <result column="storage_format" property="storageFormat" />
+        <result column="compress_type" property="compressType" />
+        <result column="null_defined" property="nullDefined" />
+        <result column="remark" property="remark" />
+        <result column="last_update_user_id" property="lastUpdateUserId" />
+        <result column="last_update_time" property="lastUpdateTime" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+</mapper>

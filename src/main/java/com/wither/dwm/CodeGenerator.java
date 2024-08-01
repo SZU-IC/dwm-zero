@@ -10,7 +10,8 @@ import java.util.function.Consumer;
 
 public class CodeGenerator {
     public static void main(String[] args) {
-        String[] tables={ "dp_naming_rule"  };
+        String[] tables={"dm_table_data_info"};
+
         FastAutoGenerator.create("jdbc:mysql://hadoop102:3306/dwm_2024", "root", "123456")
                 .globalConfig(builder -> {
                     builder.author("wither")               //作者
@@ -20,7 +21,7 @@ public class CodeGenerator {
                 })
                 .packageConfig(builder -> {                 //各个package 名称
                     builder.parent("com.wither.dwm")
-                            .moduleName("plan")
+                            .moduleName("model")
                             .entity("bean")
                             .service("service")
                             .serviceImpl("service.impl")
